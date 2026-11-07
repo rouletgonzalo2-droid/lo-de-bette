@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pedí desde tu mesa | Lo de Bette</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#6f1d2a">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@1,6..96,800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v={{V}}">
+</head>
+<body class="pg-mesa">
+<header class="m-head">
+  <div><span class="logo-a">Lo de Bette</span><h1>Mesa <span id="m-n">–</span></h1></div>
+  <p class="m-hint">Elegí, mandá a cocina y seguí tu pedido desde acá.</p>
+</header>
+<main class="m-main">
+  <p class="m-err" id="m-err" hidden></p>
+  <section class="m-tab" id="m-tab" hidden aria-labelledby="h-tab">
+    <h2 id="h-tab">Lo que ya pidieron</h2>
+    <ul id="m-tab-list"></ul>
+    <p class="m-tab-t">Total hasta ahora <b id="m-tab-total">$0</b></p>
+  </section>
+  <nav class="chips m-chips" id="m-cats" aria-label="Categorías"></nav>
+  <div id="m-menu"></div>
+</main>
+<div class="m-bar">
+  <div class="m-calls"><button class="btn btn-line btn-sm" id="m-call" type="button">Llamar al mozo</button><button class="btn btn-line btn-sm" id="m-bill" type="button">Pedir la cuenta</button></div>
+  <button class="btn btn-wine btn-block" id="m-send" type="button" disabled>Mandar a cocina · <span id="m-send-t">$0</span></button>
+</div>
+<dialog class="m-dlg" id="m-dlg" aria-labelledby="h-dlg">
+  <form method="dialog" id="m-dlg-f">
+    <h2 id="h-dlg">¿Mandamos esto a cocina?</h2>
+    <ul id="m-dlg-list"></ul>
+    <label class="fld"><span>Aclaraciones para la cocina</span><input name="notes" maxlength="200" placeholder="Sin sal, la milanesa bien cocida…"></label>
+    <div class="mesa-act"><button class="btn btn-wine" value="ok" type="submit">Sí, mandar</button><button class="btn btn-line" value="cancel" type="submit">Seguir eligiendo</button></div>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/js/mesa.js?v={{V}}" defer></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{NAME}} en Palermo · {{PRICE}} | Lo de Bette, bodegón</title>
+<meta name="description" content="{{META}}">
+<link rel="canonical" href="{{URL}}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#6f1d2a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Lo de Bette">
+<meta property="og:title" content="{{NAME}} · Lo de Bette, bodegón en Palermo">
+<meta property="og:description" content="{{META}}">
+<meta property="og:url" content="{{URL}}">
+<meta property="og:image" content="{{BASE}}/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,600;1,6..96,800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v={{V}}">
+<script type="application/ld+json">{{JSONLD}}</script>
+</head>
+<body class="pg-plato">
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="/" aria-label="Lo de Bette, inicio"><span class="logo-a">Lo de Bette</span><span class="logo-b">bodegón · Palermo</span></a>
+    <nav class="nav" aria-label="Secciones"><a href="/#carta">Carta</a><a href="/#mesa">Para llevar</a><a href="/#reservar">Reservas</a><a href="/#llegar">Cómo llegar</a></nav>
+    <div class="top-act">
+      <button class="motion" id="motion" type="button" aria-pressed="false" title="Pausar o reanudar animaciones"><svg viewBox="0 0 16 16" aria-hidden="true"><path class="i-pause" d="M4 3h3v10H4zM9 3h3v10H9z"/><path class="i-play" d="M4 2.5v11l9-5.5z"/></svg><span>Pausar</span></button>
+      <a class="btn btn-wine btn-sm" href="/#reservar">Reservar</a>
+    </div>
+  </div>
+</header>
+<main class="plato">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Migas de pan"><a href="/">Lo de Bette</a> <span aria-hidden="true">›</span> <a href="/#c-{{CAT_KEY}}">{{CAT}}</a> <span aria-hidden="true">›</span> <span aria-current="page">{{NAME}}</span></nav>
+    <article class="plato-grid">
+      <div class="plato-copy">
+        <p class="eyebrow">{{CAT}}</p>
+        <h1>{{NAME}}</h1>
+        <p class="plato-desc">{{DESC}}</p>
+        <dl class="stats"><div><dt>Precio</dt><dd>{{PRICE}}</dd></div><div><dt>Porción</dt><dd>{{SERVES}}</dd></div></dl>
+        {{AVAIL}}
+        <div class="mesa-act">
+          <button class="btn btn-wine" type="button" data-add="{{ID}}" {{DISABLED}}>Sumar a mi pedido</button>
+          <a class="btn btn-line" href="/#reservar">Reservar para comerlo acá</a>
+        </div>
+        <p class="small">Lo de Bette · {{CAT}} en Uriarte 1602, Palermo. Retiro en el local o mesa en el salón.</p>
+      </div>
+      <div class="stage stage-sm" aria-hidden="true">
+        <div class="mantel"></div>
+        <svg class="steam" viewBox="0 0 160 110"><path d="M40 105c-14-20 16-30 2-52s10-30 4-50"/><path d="M80 105c-14-22 18-32 2-55s12-30 4-48"/><path d="M120 105c-14-20 16-30 2-52s10-30 4-50"/></svg>
+        <div class="plate"><div class="plate-in"><span class="pl-k">Lo de Bette</span><span class="pl-n">{{NAME}}</span><span class="pl-p">{{PRICE}}</span></div></div>
+      </div>
+    </article>
+    <section class="related" aria-labelledby="h-rel">
+      <h2 id="h-rel">También de la carta</h2>
+      <ul>{{RELATED}}</ul>
+      <a class="btn btn-line" href="/#carta">Ver toda la carta</a>
+    </section>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div><span class="logo-a">Lo de Bette</span><p>Bodegón porteño · Uriarte 1602, Palermo, Buenos Aires</p></div>
+    <p><a href="/">Inicio</a> · <a href="/#carta">Carta</a> · <a href="/#reservar">Reservas</a></p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/js/site.js?v={{V}}" defer></script>
+</body>
+</html>

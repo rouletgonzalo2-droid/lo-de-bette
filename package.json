@@ -1,0 +1,12 @@
+{
+  "name": "lo-de-bette-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo: web con SEO, reservas, pedidos para retirar y sistema de salón (QR por mesa, cocina, caja) para Lo de Bette, bodegón en Palermo",
+  "type": "module",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  }
+}

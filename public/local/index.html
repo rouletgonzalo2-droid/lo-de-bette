@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema del local · Lo de Bette</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#221a14">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@1,6..96,800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/local/local.css">
+</head>
+<body>
+<section class="login" id="login" hidden>
+  <form class="login-card" id="login-form">
+    <span class="brand">Lo de Bette</span>
+    <h1>Sistema del local</h1>
+    <p class="mute">Salón, cocina, reservas y caja en una sola pantalla.</p>
+    <label class="fld"><span>Contraseña</span><input type="password" name="password" autocomplete="current-password" required></label>
+    <p class="msg" role="alert"></p>
+    <button class="b b-main" type="submit">Entrar</button>
+  </form>
+</section>
+
+<div class="app" id="app" hidden>
+  <header class="bar">
+    <span class="brand">Lo de Bette</span>
+    <nav class="tabs" role="tablist" aria-label="Secciones">
+      <button role="tab" aria-selected="true" data-tab="salon">Salón <i id="n-calls"></i></button>
+      <button role="tab" aria-selected="false" data-tab="cocina">Cocina <i id="n-kitchen"></i></button>
+      <button role="tab" aria-selected="false" data-tab="reservas">Reservas <i id="n-res"></i></button>
+      <button role="tab" aria-selected="false" data-tab="carta">Carta</button>
+      <button role="tab" aria-selected="false" data-tab="caja">Caja</button>
+      <button role="tab" aria-selected="false" data-tab="ajustes">Ajustes</button>
+    </nav>
+    <div class="bar-r"><span class="live" id="live" title="Conexión en vivo">En vivo</span><span class="clock" id="clock"></span><button class="b b-dark b-sm" id="logout" type="button">Salir</button></div>
+  </header>
+
+  <main class="main">
+    <section class="tab" data-panel="salon">
+      <div class="salon">
+        <div>
+          <div class="legend"><span class="lg libre">Libre</span><span class="lg ocupada">Comiendo</span><span class="lg cocina">En cocina</span><span class="lg listo">Para llevar a la mesa</span><span class="lg llama">Llaman / cuenta</span></div>
+          <div class="floor" id="floor"></div>
+        </div>
+        <aside class="side-panel" id="tp"><p class="mute">Tocá una mesa para ver la cuenta, sumar platos o cobrar.</p></aside>
+      </div>
+    </section>
+
+    <section class="tab" data-panel="cocina" hidden>
+      <div class="kds-head"><h2>Cocina</h2><div class="row"><button class="b b-line b-sm" id="sound" type="button" aria-pressed="false">Sonido: no</button><button class="b b-line b-sm" id="fs" type="button">Pantalla completa</button></div></div>
+      <div class="kds" id="kds"></div>
+    </section>
+
+    <section class="tab" data-panel="reservas" hidden>
+      <div class="kds-head"><h2>Reservas</h2><button class="b b-main b-sm" id="res-new" type="button">+ Reserva por teléfono</button></div>
+      <div class="rdays" id="rdays"></div>
+      <form class="card res-form" id="res-form" hidden>
+        <label class="fld"><span>Día</span><input type="date" name="date" required></label>
+        <label class="fld"><span>Hora</span><input type="time" name="time" step="1800" required></label>
+        <label class="fld"><span>Personas</span><input type="number" name="people" min="1" max="40" value="2" required></label>
+        <label class="fld"><span>Nombre</span><input name="name" maxlength="60" required></label>
+        <label class="fld"><span>Teléfono</span><input name="phone" type="tel" maxlength="25"></label>
+        <label class="fld"><span>Notas</span><input name="notes" maxlength="200"></label>
+        <div class="row"><button class="b b-main" type="submit">Guardar reserva</button><button class="b b-line" type="button" id="res-cancel">Cancelar</button></div>
+      </form>
+      <div id="rlist"></div>
+    </section>
+
+    <section class="tab" data-panel="carta" hidden>
+      <div class="kds-head"><h2>Carta</h2><p class="mute">Los cambios se ven en la web y en los QR de las mesas al instante.</p></div>
+      <div id="carta"></div>
+    </section>
+
+    <section class="tab" data-panel="caja" hidden>
+      <div class="kds-head"><h2>Caja</h2><button class="b b-line b-sm" id="csv" type="button">Descargar CSV de la semana</button></div>
+      <div class="kpis" id="kpis"></div>
+      <div class="grid2">
+        <div class="card"><h3>Ventas de los últimos 7 días</h3><div class="chart" id="chart"></div></div>
+        <div class="card"><h3>Lo que más sale</h3><div id="top"></div><h3 style="margin-top:22px">Medios de pago</h3><div id="pays"></div></div>
+      </div>
+    </section>
+
+    <section class="tab" data-panel="ajustes" hidden>
+      <div class="grid2">
+        <form class="card set" id="set-form">
+          <h3>Funcionamiento</h3>
+          <label class="fld"><span>Cubiertos que se pueden reservar por turno</span><input type="number" name="covers" min="1" max="500" required></label>
+          <label class="fld"><span>Plato del día (aparece en la web)</span><select name="special"></select></label>
+          <label class="fld"><span>Aviso en la web (opcional)</span><input name="note" maxlength="160" placeholder="Ej: Este domingo cerramos por el feriado"></label>
+          <label class="fld"><span>WhatsApp del bodegón (con 549…)</span><input name="wa" inputmode="numeric" maxlength="20" placeholder="5491112345678"></label>
+          <label class="check"><input type="checkbox" name="takeaway"> Tomar pedidos para llevar desde la web</label>
+          <button class="b b-main" type="submit">Guardar</button>
+        </form>
+        <div class="card">
+          <h3>QR de las mesas</h3>
+          <p class="mute">Imprimilos y pegalos en cada mesa. El cliente escanea, pide y el pedido entra directo a Cocina.</p>
+          <div class="row"><button class="b b-main" id="qr-print" type="button">Imprimir todos</button><button class="b b-line" id="qr-new" type="button">Generar QR nuevos</button></div>
+          <div id="demo-box" hidden style="margin-top:26px"><h3>Datos de ejemplo</h3><p class="mute">La demo viene con mesas, pedidos y reservas de prueba. Borralos antes de usarlo de verdad.</p><button class="b b-danger" id="demo-clear" type="button">Borrar datos de ejemplo</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="qr-sheet" id="qr-sheet" aria-hidden="true"></div>
+<dialog class="dlg" id="qr-dlg"><div id="qr-one"></div><form method="dialog" class="row"><button class="b b-line">Cerrar</button><button class="b b-main" type="button" id="qr-one-print">Imprimir</button></form></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="/local/local.js"></script>
+</body>
+</html>

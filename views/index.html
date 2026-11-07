@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lo de Bette · Bodegón en Palermo | Reservas y comida para llevar</title>
+<meta name="description" content="Bodegón porteño en Uriarte 1602, Palermo. Milanesas, parrilla, pastas caseras y osobuco para compartir. Reservá tu mesa online o pedí para retirar.">
+<link rel="canonical" href="{{BASE}}/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#6f1d2a">
+<meta name="geo.region" content="AR-C">
+<meta name="geo.placename" content="Palermo, Buenos Aires">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Lo de Bette">
+<meta property="og:title" content="Lo de Bette · Bodegón en Palermo">
+<meta property="og:description" content="Milanesas, parrilla, pastas caseras y osobuco para compartir. Reservá online o pedí para retirar.">
+<meta property="og:url" content="{{BASE}}/">
+<meta property="og:image" content="{{BASE}}/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,600;1,6..96,800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css?v={{V}}">
+<script type="application/ld+json">{{JSONLD}}</script>
+</head>
+<body>
+<a class="skip" href="#carta">Saltar a la carta</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="/" aria-label="Lo de Bette, inicio"><span class="logo-a">Lo de Bette</span><span class="logo-b">bodegón · Palermo</span></a>
+    <nav class="nav" aria-label="Secciones"><a href="#carta">Carta</a><a href="#mesa">Para llevar</a><a href="#reservar">Reservas</a><a href="#llegar">Cómo llegar</a></nav>
+    <div class="top-act">
+      <button class="motion" id="motion" type="button" aria-pressed="false" title="Pausar o reanudar animaciones"><svg viewBox="0 0 16 16" aria-hidden="true"><path class="i-pause" d="M4 3h3v10H4zM9 3h3v10H9z"/><path class="i-play" d="M4 2.5v11l9-5.5z"/></svg><span>Pausar</span></button>
+      <a class="btn btn-wine btn-sm" href="#reservar">Reservar</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="hero-k"><span class="dot" aria-hidden="true"></span><span id="open-now">{{OPEN}}</span></p>
+      <h1 id="h1"><span class="h1-a">Lo de Bette</span><span class="h1-b">bodegón en Palermo</span></h1>
+      <p class="lead">Milanesas que no entran en el plato, parrilla, pastas caseras y un osobuco para compartir entre tres. En Uriarte 1602, a una cuadra del tren.</p>
+      <div class="hero-cta"><a class="btn btn-cream" href="#reservar">Reservar mesa</a><a class="btn btn-ghost" href="#carta">Ver la carta</a></div>
+      {{NOTE}}
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="mantel"></div>
+      <svg class="steam" viewBox="0 0 160 110"><path d="M40 105c-14-20 16-30 2-52s10-30 4-50"/><path d="M80 105c-14-22 18-32 2-55s12-30 4-48"/><path d="M120 105c-14-20 16-30 2-52s10-30 4-50"/></svg>
+      <div class="plate">
+        <svg class="ring" viewBox="0 0 400 400"><defs><path id="ringpath" d="M200,200 m-168,0 a168,168 0 1,1 336,0 a168,168 0 1,1 -336,0"/></defs><text><textPath href="#ringpath" textLength="1052" lengthAdjust="spacing">{{RING}}</textPath></text></svg>
+        <div class="plate-in">
+          <span class="pl-k">Hoy recomendamos</span>
+          <span class="pl-n">{{SP_NAME}}</span>
+          <span class="pl-p">{{SP_PRICE}}</span>
+        </div>
+      </div>
+      <div class="comanda">
+        <span class="cm-h">Comanda · Mesa 7</span>
+        <span>2 × Vermut con soda</span><span>1 × Provoleta</span><span>2 × Milanesa napo</span>
+        <span class="cm-s" id="cm-s" data-s="0">● Recibida</span>
+      </div>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true"><div class="ticker-in"><span>{{TICKER}}  ✦  </span><span>{{TICKER}}  ✦  </span></div></div>
+</section>
+
+<section class="carta" id="carta" aria-labelledby="h-carta">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">La carta</p>
+      <h2 id="h-carta">Lo que sale de la cocina</h2>
+      <p>Tocá <b class="plus-i">+</b> y el plato va a tu mesa para pedirlo para llevar. Si comés acá, reservá abajo.</p>
+    </div>
+    <nav class="chips" id="chips" aria-label="Categorías de la carta"></nav>
+    <div class="menu-card rv">
+      <div class="menu-cols">{{CARTA}}</div>
+      <p class="menu-foot">Precios en pesos argentinos, con IVA incluido. Pueden cambiar sin aviso.</p>
+    </div>
+    <aside class="special rv" aria-label="Plato recomendado">
+      <span class="sp-k">Hoy en la pizarra</span>
+      <a class="sp-n" href="/carta/{{SP_SLUG}}">{{SP_NAME}}</a>
+      <p>{{SP_DESC}}</p>
+      <span class="sp-p">{{SP_PRICE}}</span>
+    </aside>
+  </div>
+</section>
+
+<section class="mesa" id="mesa" aria-labelledby="h-mesa">
+  <div class="wrap mesa-grid">
+    <div class="mesa-copy rv">
+      <p class="eyebrow">Para llevar</p>
+      <h2 id="h-mesa">Armá la mesa</h2>
+      <p>Cada plato que sumás cae acá. Te decimos para cuántos alcanza, elegís a qué hora pasás y lo retirás en Uriarte 1602.</p>
+      <dl class="stats">
+        <div><dt>Platos</dt><dd id="m-count">0</dd></div>
+        <div><dt>Alcanza para</dt><dd id="m-serves">–</dd></div>
+        <div><dt>Total</dt><dd id="m-total">$0</dd></div>
+      </dl>
+      <div class="mesa-act">
+        <button class="btn btn-wine" id="m-order" type="button" disabled>Pedir para retirar</button>
+        <button class="btn btn-line" id="m-clear" type="button" disabled>Vaciar</button>
+      </div>
+      <p class="small" id="m-off" hidden>Hoy no estamos tomando pedidos para llevar. Te esperamos en el salón.</p>
+      <button class="track-pill" id="track-pill" type="button" hidden></button>
+    </div>
+    <div class="table-top rv" id="table-top">
+      <p class="table-empty" id="table-empty">La mesa está vacía.<br>Sumá algo de la carta.</p>
+      <ul class="plates" id="plates" aria-label="Platos en tu mesa" aria-live="polite"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="reservas" id="reservar" aria-labelledby="h-res">
+  <div class="wrap res-grid">
+    <div class="res-copy rv">
+      <p class="eyebrow">Reservas</p>
+      <h2 id="h-res">Guardate la mesa</h2>
+      <p>Elegí el día, cuántos son y el horario. Te queda un código y en el bodegón la ven al instante.</p>
+      <ul class="res-facts"><li>Lunes a sábado: mediodía de 12 a 15, noche de 20 a 23:30</li><li>Domingos: de 12 a 17:30</li><li>Más de 12 personas: escribinos por <a href="https://www.instagram.com/lodebette/" rel="noopener" target="_blank">Instagram</a></li></ul>
+    </div>
+    <div class="res-box rv">
+      <form class="res-card" id="res-form" novalidate>
+        <fieldset><legend>Día</legend><div class="days" id="res-days"></div></fieldset>
+        <fieldset><legend>Personas</legend>
+          <div class="stepper"><button type="button" data-step="-1" aria-label="Una persona menos">−</button><output id="res-people" aria-live="polite">2</output><button type="button" data-step="1" aria-label="Una persona más">+</button></div>
+        </fieldset>
+        <fieldset><legend>Horario</legend><div class="slots" id="res-slots"><p class="small">Cargando horarios…</p></div></fieldset>
+        <div class="row2">
+          <label class="fld"><span>Nombre</span><input name="name" autocomplete="name" maxlength="60" required></label>
+          <label class="fld"><span>Teléfono</span><input name="phone" type="tel" autocomplete="tel" maxlength="25" required></label>
+        </div>
+        <label class="fld"><span>¿Algo que tengamos que saber?</span><input name="notes" maxlength="200" placeholder="Cumpleaños, silla para bebé, mesa en la vereda…"></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="msg" id="res-msg" role="alert"></p>
+        <button class="btn btn-mustard btn-block" type="submit">Reservar</button>
+      </form>
+      <div class="res-done" id="res-done" hidden tabindex="-1"></div>
+    </div>
+  </div>
+</section>
+
+<section class="llegar" id="llegar" aria-labelledby="h-llegar">
+  <div class="wrap llegar-grid">
+    <div class="rv">
+      <p class="eyebrow">Cómo llegar</p>
+      <h2 id="h-llegar">Uriarte 1602, Palermo</h2>
+      <dl class="info">
+        <div><dt>Horario</dt><dd>{{HOURS}}</dd></div>
+        <div><dt>Transporte</dt><dd>Colectivos 39, 55 y 106. Tren San Martín, estación Palermo.</dd></div>
+        <div><dt>Redes</dt><dd><a href="https://www.instagram.com/lodebette/" rel="noopener" target="_blank">@lodebette en Instagram</a></dd></div>
+      </dl>
+      <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Lo+de+Bette+Uriarte+1602+Palermo" rel="noopener" target="_blank">Abrir en Google Maps</a>
+    </div>
+    <div class="map rv"><iframe title="Mapa: Lo de Bette, Uriarte 1602, Palermo" src="https://maps.google.com/maps?q=Uriarte%201602%2C%20Palermo%2C%20Buenos%20Aires&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</section>
+
+<section class="faq" id="preguntas" aria-labelledby="h-faq">
+  <div class="wrap faq-in rv"><h2 id="h-faq">Preguntas frecuentes</h2>{{FAQ}}</div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div><span class="logo-a">Lo de Bette</span><p>Bodegón porteño · Uriarte 1602, Palermo, Buenos Aires</p></div>
+    <p>{{HOURS}}</p>
+    <p><a href="https://www.instagram.com/lodebette/" rel="noopener" target="_blank">Instagram</a> · <a href="/local/" rel="nofollow">Ingreso del equipo</a></p>
+  </div>
+</footer>
+
+<div class="bar" id="bar" hidden><span id="bar-t">Tu mesa</span><a class="btn btn-cream btn-sm" href="#mesa">Ver mi mesa</a></div>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer-bg" data-close></div>
+  <aside class="drawer-p" role="dialog" aria-modal="true" aria-labelledby="dr-t">
+    <header class="dr-h"><h2 id="dr-t">Pedido para retirar</h2><button class="x" type="button" data-close aria-label="Cerrar">×</button></header>
+    <div class="dr-b" id="dr-b"></div>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/js/site.js?v={{V}}" defer></script>
+</body>
+</html>
